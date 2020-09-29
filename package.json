@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "mint-ui": "^2.2.13",
+    "vue": "^2.6.12"
+  },
+  "dependencies": {
+    "mint-ui": "^2.2.13"
+  }
+}

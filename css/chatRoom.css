@@ -1,0 +1,87 @@
+.chat-room {
+  width: 16rem;
+  font-family: 'PingFang-SC-Medium';
+}
+
+.header {
+  height: 3.09179rem;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0.57971rem;
+}
+
+.header .sponsor-img {
+  width: 1.93237rem;
+  float: left;
+  margin-right: 0.34783rem;
+  margin-top: 0.57971rem;
+}
+
+.header .sponsor-name {
+  float: left;
+  color: #333;
+  margin-top: 0.42512rem;
+}
+
+.header .sponsor-name label {
+  font-size: 0.61836rem;
+}
+
+.header .sponsor-name p {
+  font-size: 0.54106rem;
+}
+
+.header .sponsor-icon {
+  float: right;
+  margin-top: 0.96618rem;
+}
+
+.header .sponsor-icon img {
+  width: 1.15942rem;
+  margin-left: 0.19324rem;
+}
+
+.middle {
+  min-height: 23.11111rem;
+}
+
+.footer {
+  height: 2.24155rem;
+  background-color: #fff;
+  padding: 0.34783rem 0.57971rem;
+  overflow: hidden;
+}
+
+.footer img {
+  width: 1.54589rem;
+}
+
+.footer img:last-child {
+  margin-right: 0.38647rem;
+}
+
+.footer input {
+  width: 7.6715rem;
+  height: 1.54589rem;
+  background-image: url(../img/msgInput.png);
+  background-repeat: no-repeat;
+  background-size: 8.44444rem 1.54589rem;
+  border: 0;
+  float: left;
+  font-size: 0.57971rem;
+  padding: 0 0.38647rem;
+  margin-left: 0.57971rem;
+}
+
+.footer input[type=text]:focus {
+  outline: none;
+  border: 0;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}

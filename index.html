@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="hotcss" content="initial-dpr=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入样式库 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chatRoom.css">
+    <script src="js/hotcss.js"></script>
+
+    <title>聊天室</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div class="content chat-room">
+            <div class="header">
+                <img src="img/sponsorImg.png" alt="" class="sponsor-img">
+                <div class="sponsor-name">
+                    <label>赵X海</label>
+                    <p>XX小区XX号楼XX单元</p>
+                </div>
+                <div class="sponsor-icon">
+                    <img src="img/icon@.png" alt="">
+                    <img src="img/iconMsg.png" alt="">
+                </div>
+            </div>
+            <div class="middle">
+                <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded"
+                    ref="loadmore">
+                    <ul>
+                        <li v-for="item in list">{{ item }}</li>
+                    </ul>
+                </mt-loadmore>
+            </div>
+            <div class="footer">
+                <img src="img/iconVoice.png" alt="" class="fl">
+                <input type="text">
+                <img src="img/iconAdd.png" alt="" class="fr">
+                <img src="img/iconShare.png" alt="" class="fr">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="js/index.js"></script>
+
+<script src="js/chatRoom.js"></script>
+
+</html>

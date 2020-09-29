@@ -1,0 +1,94 @@
+@import "px2rem.scss";
+$designWidth : 828; //写scss之前，必须要先定义designWidth。
+
+//聊天室
+.chat-room {
+    width: px2rem(828);
+    font-family: 'PingFang-SC-Medium';
+}
+
+// 聊天室头部
+.header {
+    height: px2rem(160);
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 px2rem(30);
+
+    .sponsor-img {
+        width: px2rem(100);
+        float: left;
+        margin-right: px2rem(18);
+        margin-top: px2rem(30);
+    }
+
+    .sponsor-name {
+        float: left;
+        color: #333;
+        margin-top: px2rem(22);
+
+        label {
+            font-size: px2rem(32);
+        }
+
+        p {
+            font-size: px2rem(28);
+        }
+    }
+
+    .sponsor-icon {
+        float: right;
+        margin-top: px2rem(50);
+
+        img {
+            width: px2rem(60);
+            margin-left: px2rem(10);
+        }
+    }
+}
+
+//聊天室中部
+.middle {
+    min-height: px2rem(1196);
+}
+
+//聊天室底部
+.footer {
+    height: px2rem(116);
+    background-color: #fff;
+    padding: px2rem(18) px2rem(30);
+    overflow: hidden;
+
+    img {
+        width: px2rem(80);
+    }
+
+    img:last-child {
+        margin-right: px2rem(20);
+    }
+
+    input {
+        width: px2rem(397);
+        height: px2rem(80);
+        background-image: url(../img/msgInput.png);
+        background-repeat: no-repeat;
+        background-size: px2rem(437) px2rem(80);
+        border: 0;
+        float: left;
+        font-size: px2rem(30);
+        padding: 0 px2rem(20);
+        margin-left: px2rem(30);
+    }
+
+    input[type=text]:focus {
+        outline: none;
+        border: 0;
+    }
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
