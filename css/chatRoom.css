@@ -42,7 +42,12 @@
 }
 
 .middle {
-  min-height: 23.11111rem;
+  height: 23.11111rem;
+}
+
+.m-loadmore {
+  height: 100%;
+  overflow: scroll;
 }
 
 .footer {

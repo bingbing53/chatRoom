@@ -48,7 +48,12 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 
 //聊天室中部
 .middle {
-    min-height: px2rem(1196);
+    height: px2rem(1196);
+}
+
+.m-loadmore {
+    height: 100%;
+    overflow: scroll;
 }
 
 //聊天室底部

@@ -31,9 +31,17 @@
                 </div>
             </div>
             <div class="middle">
-                <div class="m-loadmore">
-                    
+                <div class="m-loadmore"  :style="{'-webkit-overflow-scrolling': scrollMode}">
+                    <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :auto-fill="false" ref="loadmore">
+                        <ul class="list" v-for="items in pageList">
+                            <li>
+                                <div>{{items}}</div>
+                            </li>
+                        </ul>
+                    </mt-loadmore>
                 </div>
+                
+                  
             </div>
             <div class="footer">
                 <img src="img/iconVoice.png" alt="" class="fl">
@@ -48,11 +56,10 @@
 
 <script src="node_modules/vue/dist/vue.js"></script>
 <!-- 引入组件库 -->
-<script src="js/index.js"></script>
+<script  src="js/index.js"></script>
 
 <script src="js/chatRoom.js"></script>
 <script type="module">
-
+    
 </script>
-
 </html>
