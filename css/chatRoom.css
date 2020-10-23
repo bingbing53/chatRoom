@@ -48,6 +48,25 @@
 .m-loadmore {
   height: 100%;
   overflow: scroll;
+  padding: 0.57971rem;
+}
+
+.m-loadmore .spokesman-lt {
+  overflow: hidden;
+}
+
+.m-loadmore .spokesman-lt img {
+  width: 1.75845rem;
+  height: 1.75845rem;
+  border-radius: 50%;
+  float: left;
+}
+
+.m-loadmore .spokesman-lt div {
+  width: 10.97585rem;
+  height: 6.02899rem;
+  float: left;
+  background-image: url(../img/);
 }
 
 .footer {

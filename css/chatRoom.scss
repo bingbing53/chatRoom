@@ -54,6 +54,25 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 .m-loadmore {
     height: 100%;
     overflow: scroll;
+    padding: px2rem(30);
+
+    .spokesman-lt {
+        overflow: hidden;
+
+        img {
+            width: px2rem(91);
+            height: px2rem(91);
+            border-radius: 50%;
+            float: left;
+        }
+
+        div {
+            width: px2rem(568);
+            height: px2rem(312);
+            float: left;
+            background-image: url(../img/);
+        }
+    }
 }
 
 //聊天室底部
