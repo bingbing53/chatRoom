@@ -225,3 +225,15 @@
 .fr {
   float: right;
 }
+
+.search-list {
+  background-color: #fff;
+}
+
+.search-list input {
+  width: 14.84058rem;
+  height: 1.48792rem;
+  background: #F5F5F5;
+  border-radius: 0.75362rem;
+  border: 0;
+}

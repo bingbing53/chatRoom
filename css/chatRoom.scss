@@ -243,3 +243,16 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 .fr {
     float: right;
 }
+
+//搜索
+.search-list {
+    background-color: #fff;
+
+    input {
+        width: px2rem(768);
+        height: px2rem(77);
+        background: #F5F5F5;
+        border-radius: px2rem(39);
+        border: 0;
+    }
+}
