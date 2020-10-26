@@ -68,11 +68,138 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 
         div {
             width: px2rem(568);
-            height: px2rem(312);
+            // height: px2rem(312);
             float: left;
-            background-image: url(../img/);
+            // background-image: url(../img/);
+            background-color: #75AFFF;
+            border-radius: px2rem(20);
+            padding: px2rem(20);
+            font-size: px2rem(32);
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #FFFEFE;
+            line-height: px2rem(50);
+            margin-top: px2rem(45);
         }
     }
+
+    .spokesman-rg {
+
+        // overflow: hidden;
+        >img {
+            width: px2rem(91);
+            height: px2rem(91);
+            border-radius: 50%;
+            float: right;
+        }
+
+        >div {
+            width: px2rem(468);
+            height: px2rem(87);
+            float: right;
+            background-color: #4375F2;
+            border-radius: px2rem(20);
+            margin-top: px2rem(45);
+
+            >label {
+                font-size: px2rem(32);
+                font-family: PingFang SC;
+                font-weight: 500;
+                color: #FFFEFE;
+                line-height: px2rem(50);
+                margin-left: px2rem(30);
+            }
+
+            >span {
+                float: right;
+                margin-right: px2rem(30);
+
+                img {
+                    width: px2rem(24);
+                    height: px2rem(33);
+                }
+            }
+
+            >i {
+                float: right;
+                margin-right: px2rem(13);
+
+                img {
+                    width: px2rem(22);
+                    height: px2rem(20);
+                }
+            }
+        }
+
+        //操作按钮
+        .handle-icon {
+            position: absolute;
+            width: px2rem(310);
+            height: px2rem(91);
+            background-image: url(../img/handle.png);
+            background-repeat: no-repeat;
+            background-size: px2rem(310) px2rem(91);
+            right: px2rem(60);
+            top: px2rem(87);
+            background-color: transparent;
+
+            >div {
+                width: 49%;
+                float: left;
+                // margin-top: px2rem(5);
+                overflow: hidden;
+
+                label {
+                    font-size: px2rem(28);
+                    font-family: PingFang SC;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    margin-top: px2rem(33);
+                    float: left;
+                    margin-left: px2rem(30);
+                }
+
+                >i {
+                    float: left;
+                    overflow: hidden;
+
+                    img {
+                        margin-top: px2rem(35);
+                    }
+
+                }
+            }
+
+            >i {
+                width: px2rem(3);
+                height: px2rem(40);
+                background: #F5F5F5;
+                border-radius: px2rem(2);
+                float: left;
+                margin: 0;
+                margin-top: px2rem(29);
+            }
+
+            .copy-icon>i img {
+                width: px2rem(27);
+                height: px2rem(27);
+                margin-left: px2rem(15);
+                margin-top: px2rem(37);
+
+            }
+
+            .withdraw-icon>i img {
+                width: px2rem(25);
+                height: px2rem(26);
+                margin-left: px2rem(14);
+            }
+        }
+    }
+}
+
+//定位
+.rePath {
+    position: relative;
 }
 
 //聊天室底部
