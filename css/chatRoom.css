@@ -227,13 +227,97 @@
 }
 
 .search-list {
+  display: none;
   background-color: #fff;
+  padding-left: 0.38647rem;
+  padding-left: 0.57971rem;
+  padding-right: 0.57971rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .search-list input {
   width: 14.84058rem;
   height: 1.48792rem;
   background: #F5F5F5;
-  border-radius: 0.75362rem;
+  border-radius: 0.67633rem;
   border: 0;
+  text-align: center;
+}
+
+.search-list ul {
+  overflow: hidden;
+  margin-left: -1.0628rem;
+  margin-bottom: 0.57971rem;
+}
+
+.search-list ul li {
+  float: left;
+  overflow: hidden;
+  margin-left: 1.35266rem;
+  text-align: center;
+  margin-top: 0.57971rem;
+}
+
+.search-list ul li img {
+  width: 1.73913rem;
+  height: 1.73913rem;
+  display: block;
+}
+
+.search-list ul li label {
+  font-size: 0.61836rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  display: block;
+}
+
+.search-handle {
+  background-color: #fff;
+  padding-left: 0.38647rem;
+  padding-left: 0.57971rem;
+  padding-right: 0.57971rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.search-handle input {
+  width: 14.84058rem;
+  height: 1.48792rem;
+  background: #F5F5F5;
+  border-radius: 0.67633rem;
+  border: 0;
+  text-align: center;
+}
+
+.search-handle ul li {
+  overflow: hidden;
+}
+
+.search-handle ul li img {
+  width: 1.93237rem;
+  height: 1.93237rem;
+  float: left;
+}
+
+.search-handle ul li div {
+  float: left;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-top: 0.28986rem;
+}
+
+.search-handle ul li div label {
+  font-size: 0.61836rem;
+  display: block;
+}
+
+.search-handle ul li div span {
+  font-size: 0.54106rem;
+  display: block;
+  color: #7E7E7E;
 }

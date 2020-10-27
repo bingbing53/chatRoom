@@ -246,13 +246,101 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 
 //搜索
 .search-list {
+    display: none;
     background-color: #fff;
+    padding-left: px2rem(20);
+    padding-left: px2rem(30);
+    padding-right: px2rem(30);
+    position: fixed;
+    top: 0;
+    z-index: 10;
 
     input {
         width: px2rem(768);
         height: px2rem(77);
         background: #F5F5F5;
-        border-radius: px2rem(39);
+        border-radius: px2rem(35);
         border: 0;
+        text-align: center;
+        // margin-bottom: px2rem(30);
+    }
+
+    ul {
+        overflow: hidden;
+        margin-left: px2rem(-55);
+        margin-bottom: px2rem(30);
+
+        li {
+            float: left;
+            overflow: hidden;
+            margin-left: px2rem(70);
+            text-align: center;
+            margin-top: px2rem(30);
+
+            img {
+                width: px2rem(90);
+                height: px2rem(90);
+                display: block;
+            }
+
+            label {
+                font-size: px2rem(32);
+                font-family: PingFang SC;
+                font-weight: 500;
+                color: #333333;
+                display: block;
+            }
+        }
+    }
+}
+
+// 搜索操作
+.search-handle {
+    background-color: #fff;
+    padding-left: px2rem(20);
+    padding-left: px2rem(30);
+    padding-right: px2rem(30);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    input {
+        width: px2rem(768);
+        height: px2rem(77);
+        background: #F5F5F5;
+        border-radius: px2rem(35);
+        border: 0;
+        text-align: center;
+    }
+
+    ul {
+        li {
+            overflow: hidden;
+
+            img {
+                width: px2rem(100);
+                height: px2rem(100);
+                float: left;
+            }
+
+            div {
+                float: left;
+                font-family: PingFang SC;
+                font-weight: 500;
+                color: #333333;
+                margin-top: px2rem(15);
+
+                label {
+                    font-size: px2rem(32);
+                    display: block;
+                }
+
+                span {
+                    font-size: px2rem(28);
+                    display: block;
+                    color: #7E7E7E;
+                }
+            }
+        }
     }
 }
