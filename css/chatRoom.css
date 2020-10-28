@@ -42,7 +42,7 @@
 }
 
 .middle {
-  height: 23.11111rem;
+  min-height: 15.45894rem;
 }
 
 .m-loadmore {
@@ -121,7 +121,7 @@
   height: 0.38647rem;
 }
 
-.m-loadmore .spokesman-rg .handle-icon {
+.m-loadmore .spokesman-rg .msg-icon {
   position: absolute;
   width: 5.99034rem;
   height: 1.75845rem;
@@ -133,13 +133,13 @@
   background-color: transparent;
 }
 
-.m-loadmore .spokesman-rg .handle-icon > div {
+.m-loadmore .spokesman-rg .msg-icon > div {
   width: 49%;
   float: left;
   overflow: hidden;
 }
 
-.m-loadmore .spokesman-rg .handle-icon > div label {
+.m-loadmore .spokesman-rg .msg-icon > div label {
   font-size: 0.54106rem;
   font-family: PingFang SC;
   font-weight: 400;
@@ -149,16 +149,16 @@
   margin-left: 0.57971rem;
 }
 
-.m-loadmore .spokesman-rg .handle-icon > div > i {
+.m-loadmore .spokesman-rg .msg-icon > div > i {
   float: left;
   overflow: hidden;
 }
 
-.m-loadmore .spokesman-rg .handle-icon > div > i img {
+.m-loadmore .spokesman-rg .msg-icon > div > i img {
   margin-top: 0.67633rem;
 }
 
-.m-loadmore .spokesman-rg .handle-icon > i {
+.m-loadmore .spokesman-rg .msg-icon > i {
   width: 0.05797rem;
   height: 0.77295rem;
   background: #F5F5F5;
@@ -168,14 +168,14 @@
   margin-top: 0.56039rem;
 }
 
-.m-loadmore .spokesman-rg .handle-icon .copy-icon > i img {
+.m-loadmore .spokesman-rg .msg-icon .copy-icon > i img {
   width: 0.52174rem;
   height: 0.52174rem;
   margin-left: 0.28986rem;
   margin-top: 0.71498rem;
 }
 
-.m-loadmore .spokesman-rg .handle-icon .withdraw-icon > i img {
+.m-loadmore .spokesman-rg .msg-icon .withdraw-icon > i img {
   width: 0.48309rem;
   height: 0.50242rem;
   margin-left: 0.27053rem;
@@ -185,22 +185,38 @@
   position: relative;
 }
 
+.fixPath {
+  position: fixed;
+  bottom: 0;
+}
+
+.fixPath1 {
+  position: fixed;
+  bottom: 7.14976rem;
+}
+
 .footer {
-  height: 2.24155rem;
+  width: 100%;
   background-color: #fff;
-  padding: 0.34783rem 0.57971rem;
   overflow: hidden;
 }
 
-.footer img {
+.footer div {
+  overflow: hidden;
+  height: 2.43478rem;
+  padding: 0.34783rem 0.57971rem;
+  border-bottom: 0.01932rem solid #F5F5F5;
+}
+
+.footer div img {
   width: 1.54589rem;
 }
 
-.footer img:last-child {
+.footer div img:last-child {
   margin-right: 0.38647rem;
 }
 
-.footer input {
+.footer div input {
   width: 7.6715rem;
   height: 1.54589rem;
   background-image: url(../img/msgInput.png);
@@ -213,9 +229,27 @@
   margin-left: 0.57971rem;
 }
 
-.footer input[type=text]:focus {
+.footer div input[type=text]:focus {
   outline: none;
   border: 0;
+}
+
+.footer ul {
+  overflow: hidden;
+  padding: 0.38647rem 0.57971rem 0;
+  margin-left: -0.57971rem;
+  margin-bottom: 2.31884rem;
+  display: none;
+}
+
+.footer ul li {
+  float: left;
+  margin-left: 0.57971rem;
+}
+
+.footer ul li img {
+  width: 1.93237rem;
+  height: 1.93237rem;
 }
 
 .fl {
@@ -229,7 +263,6 @@
 .search-list {
   display: none;
   background-color: #fff;
-  padding-left: 0.38647rem;
   padding-left: 0.57971rem;
   padding-right: 0.57971rem;
   position: fixed;
@@ -276,12 +309,13 @@
 
 .search-handle {
   background-color: #fff;
-  padding-left: 0.38647rem;
   padding-left: 0.57971rem;
   padding-right: 0.57971rem;
   position: fixed;
   top: 0;
   z-index: 10;
+  padding-bottom: 0.57971rem;
+  display: none;
 }
 
 .search-handle input {
@@ -295,6 +329,8 @@
 
 .search-handle ul li {
   overflow: hidden;
+  border-bottom: 0.01932rem solid rgba(0, 0, 0, 0.1);
+  padding: 0.48309rem 0;
 }
 
 .search-handle ul li img {
@@ -303,21 +339,58 @@
   float: left;
 }
 
-.search-handle ul li div {
+.search-handle ul li div.search-msg {
   float: left;
   font-family: PingFang SC;
   font-weight: 500;
   color: #333333;
   margin-top: 0.28986rem;
+  margin-left: 0.57971rem;
 }
 
-.search-handle ul li div label {
+.search-handle ul li div.search-msg label {
   font-size: 0.61836rem;
   display: block;
 }
 
-.search-handle ul li div span {
+.search-handle ul li div.search-msg span {
   font-size: 0.54106rem;
   display: block;
   color: #7E7E7E;
+}
+
+.search-handle .handle-icon {
+  float: right;
+  width: 4.07729rem;
+  height: 1.15942rem;
+  background-image: url(../img/handleBack.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 0.57971rem;
+  overflow: hidden;
+  padding: 0.21256rem 0.57971rem;
+}
+
+.search-handle .handle-icon img {
+  width: 0.7343rem;
+  height: 0.7343rem;
+  float: left;
+}
+
+.search-handle .handle-icon i {
+  width: 0.03865rem;
+  height: 0.59903rem;
+  background: #FFFFFF;
+  border-radius: 0.01932rem;
+  float: left;
+  margin-left: 0.57971rem;
+  margin-top: 0.07729rem;
+}
+
+.search-handle .handle-icon span {
+  font-size: 0.50242rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  float: right;
 }

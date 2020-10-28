@@ -48,7 +48,7 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 
 //聊天室中部
 .middle {
-    height: px2rem(1196);
+    min-height: px2rem(800);
 }
 
 .m-loadmore {
@@ -132,7 +132,7 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
         }
 
         //操作按钮
-        .handle-icon {
+        .msg-icon {
             position: absolute;
             width: px2rem(310);
             height: px2rem(91);
@@ -202,37 +202,75 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
     position: relative;
 }
 
+.fixPath {
+    position: fixed;
+    bottom: 0;
+}
+
+.fixPath1 {
+    position: fixed;
+    bottom: px2rem(370);
+}
+
 //聊天室底部
 .footer {
-    height: px2rem(116);
+    width: 100%;
+    // height: 2.24155rem;
     background-color: #fff;
-    padding: px2rem(18) px2rem(30);
+    // padding: 0 px2rem(30);
     overflow: hidden;
 
-    img {
-        width: px2rem(80);
+
+    div {
+        overflow: hidden;
+        height: px2rem(126);
+        padding: px2rem(18) px2rem(30);
+        border-bottom: px2rem(1) solid #F5F5F5;
+
+        img {
+            width: px2rem(80);
+
+        }
+
+        img:last-child {
+            margin-right: px2rem(20);
+        }
+
+        input {
+            width: px2rem(397);
+            height: px2rem(80);
+            background-image: url(../img/msgInput.png);
+            background-repeat: no-repeat;
+            background-size: px2rem(437) px2rem(80);
+            border: 0;
+            float: left;
+            font-size: px2rem(30);
+            padding: 0 px2rem(20);
+            margin-left: px2rem(30);
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            border: 0;
+        }
     }
 
-    img:last-child {
-        margin-right: px2rem(20);
-    }
+    ul {
+        overflow: hidden;
+        padding: px2rem(20) px2rem(30) 0;
+        margin-left: px2rem(-30);
+        margin-bottom: px2rem(120);
+        display: none;
 
-    input {
-        width: px2rem(397);
-        height: px2rem(80);
-        background-image: url(../img/msgInput.png);
-        background-repeat: no-repeat;
-        background-size: px2rem(437) px2rem(80);
-        border: 0;
-        float: left;
-        font-size: px2rem(30);
-        padding: 0 px2rem(20);
-        margin-left: px2rem(30);
-    }
+        li {
+            float: left;
+            margin-left: px2rem(30);
 
-    input[type=text]:focus {
-        outline: none;
-        border: 0;
+            img {
+                width: px2rem(100);
+                height: px2rem(100);
+            }
+        }
     }
 }
 
@@ -244,11 +282,13 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
     float: right;
 }
 
+
+
 //搜索
 .search-list {
     display: none;
     background-color: #fff;
-    padding-left: px2rem(20);
+    // padding-left: px2rem(20);
     padding-left: px2rem(30);
     padding-right: px2rem(30);
     position: fixed;
@@ -297,12 +337,14 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 // 搜索操作
 .search-handle {
     background-color: #fff;
-    padding-left: px2rem(20);
+    // padding-left: px2rem(20);
     padding-left: px2rem(30);
     padding-right: px2rem(30);
     position: fixed;
     top: 0;
     z-index: 10;
+    padding-bottom: px2rem(30);
+    display: none;
 
     input {
         width: px2rem(768);
@@ -316,6 +358,9 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
     ul {
         li {
             overflow: hidden;
+            border-bottom: px2rem(1) solid rgba(0, 0, 0, 0.1);
+            // opacity: 0.1;
+            padding: px2rem(25) 0;
 
             img {
                 width: px2rem(100);
@@ -323,12 +368,13 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
                 float: left;
             }
 
-            div {
+            div.search-msg {
                 float: left;
                 font-family: PingFang SC;
                 font-weight: 500;
                 color: #333333;
                 margin-top: px2rem(15);
+                margin-left: px2rem(30);
 
                 label {
                     font-size: px2rem(32);
@@ -341,6 +387,42 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
                     color: #7E7E7E;
                 }
             }
+        }
+    }
+
+    .handle-icon {
+        float: right;
+        width: px2rem(211);
+        height: px2rem(60);
+        background-image: url(../img/handleBack.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: px2rem(30);
+        overflow: hidden;
+        padding: px2rem(11) px2rem(30);
+
+        img {
+            width: px2rem(38);
+            height: px2rem(38);
+            float: left;
+        }
+
+        i {
+            width: px2rem(2);
+            height: px2rem(31);
+            background: #FFFFFF;
+            border-radius: px2rem(1);
+            float: left;
+            margin-left: px2rem(30);
+            margin-top: px2rem(4);
+        }
+
+        span {
+            font-size: px2rem(26);
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #FFFFFF;
+            float: right;
         }
     }
 }

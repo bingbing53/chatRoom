@@ -27,7 +27,7 @@
                 </div>
                 <div class="sponsor-icon">
                     <img src="img/icon@.png" alt="" class="searchIcon">
-                    <img src="img/iconMsg.png" alt="">
+                    <img src="img/iconMsg.png" alt="" class="handleIcon">
                 </div>
             </div>
             <div class="middle">
@@ -43,7 +43,7 @@
                             <span><img src="img/play.png" alt=""></span>
                             <i><img src="img/play1.png" alt=""></i>
                         </div>
-                        <div class="handle-icon" style="display: none;">
+                        <div class="msg-icon" style="display: none;">
                             <div class="copy-icon">
                                 <label>复制</label>
                                 <i><img src="img/复制.png" alt=""></i>
@@ -57,11 +57,22 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <img src="img/iconVoice.png" alt="" class="fl">
-                <input type="text">
-                <img src="img/iconAdd.png" alt="" class="fr">
-                <img src="img/iconShare.png" alt="" class="fr">
+            <div class="footer fixPath">
+                <div>
+                    <img src="img/iconVoice.png" alt="" class="fl">
+                    <input type="text">
+                    <img src="img/iconAdd.png" alt="" class="fr iconAdd">
+                    <img src="img/iconShare.png" alt="" class="fr">
+                </div>
+                
+                <ul class="footerIcon">
+                    <li>
+                        <img src="img/相机.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/图片.png" alt="">
+                    </li>
+                </ul>
 
             </div>
             <!-- 搜索@ -->
@@ -100,14 +111,27 @@
                 <ul>
                     <li>
                         <img src="img/imgListX.jpg" alt="">
-                        <div>
+                        <div class="search-msg">
                             <label>赵X海</label>
                             <span>XX小区XX房间XX单元</span>
                         </div>
+                        <div class="handle-icon">
+                            <img src="img/禁言.png" alt="">
+                            <i></i>
+                            <span>移出</span>
+                        </div>
                     </li>
                     <li>
-                        <img src="img/imgListY.jpg" alt="">
-                        <label>赵X海</label>
+                        <img src="img/sponsorImg.png" alt="">
+                        <div class="search-msg">
+                            <label>赵X海</label>
+                            <span>XX小区XX房间XX单元</span>
+                        </div>
+                        <div class="handle-icon">
+                            <img src="img/禁言.png" alt="">
+                            <i></i>
+                            <span>移出</span>
+                        </div>
                     </li>
                 </ul>
             </div>  
@@ -126,7 +150,18 @@
     });
     $(".middle").click(function(){
         $(".search-list").hide();
+        $(".search-handle").hide();
     });
+    $(".handleIcon").click(function(){
+        $(".search-handle").show();
+    });
+
+    $(".iconAdd").click(function(){
+        $(".footerIcon").toggle();       
+    })
+    
+    
+    
 </script>
 
 </html>
