@@ -47,8 +47,22 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 }
 
 //聊天室中部
+.chat-middle {
+    width: 100%;
+    position: fixed;
+    top: px2rem(160);
+    bottom: px2rem(130);
+    left: 0;
+    right: 0;
+    border: 1px solid red;
+}
+
 .middle {
-    min-height: px2rem(800);
+    // min-height: px2rem(800);
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    border: 1px solid black;
 }
 
 .m-loadmore {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- <button onclick="init()">初始化</button><br/> -->
+        <button @click="register">注册</button><br/>
+    
+    </div>
+</body>
+<script src='./jmessage-sdk-web.2.6.0.min.js'></script>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./md5.js"></script>
+<script>
+    // vue 
+    window.onload = function(){
+        var JIM = new JMessage({debug:false});
+         new Vue({
+             el:'#wrap',
+             data(){
+                return {
+                    signature:'',//签名
+                }
+             },
+             methods:{
+               
+                //  初始化 
+                init(){
+                    
+                    JIM.init({
+                    "appkey":"4f7aef34fb361292c566a1cd",
+                    "random_str":  "404",
+                    "signature":  '7db047a67a9d7293850ac69d14cc82bf',
+                    "timestamp":  1507882399401,
+                    "flag": 1
+
+
+                    // "appkey":"cf3ef13a067670168b1b1918",
+                    // "random_str":  "404",
+                    // "signature":  this.signature,
+                    // "timestamp": 1507882399401,
+                    // "flag": 1
+                }).onSuccess(function(data) {
+                //data.code 返回码
+                //data.message 描述
+                console.log('鉴权成功')
+                console.log('初始化success:' + JSON.stringify(data));
+                }).onFail(function(data) {
+                    console.log('鉴权失败')
+               console.log('error:' + JSON.stringify(data))
+                    // 同上
+                });
+                },
+                // 注册
+                register(){
+                    JIM.register({
+                    'username' : 'xkx',
+                    'password': '123456',
+                    'nickname' : 'test'
+                }).onSuccess(function(data) {
+                    console.log('success:' + JSON.stringify(data));
+                }).onFail(function(data) {
+                    console.log('error:' + JSON.stringify(data))
+                });
+                }
+             },
+             mounted(){
+                //  初始化 
+                this.init();
+                // 测试md5加密 
+                console.log(md5('1111'),'md5加密');
+                // 获取当前时间戳 精确到秒
+                // var timestamp = Date.parse(new Date());
+                // var timestamp2 = Date.now(); //精确到毫秒？
+                // console.log(timestamp,'timestamp');
+                // console.log(timestamp2,'timestamp2');
+                 // 签名生成算法如下:
+                // signature = md5(appkey={appkey}&timestamp={timestamp}&random_str={random_str}&key={secret})
+                // 示例
+                // signature = md5("appkey=25b693b31d2c2ad5f072ef0c&timestamp=1507791639926&random_str=022cd9fd995849b&key=bc2efab258f2019727a4f36l")
+                let tmp = "appkey=cf3ef13a067670168b1b1918&timestamp=1507882399401&random_str=404&key=afb39ba3e13ff0f40126f0ff"
+                //  let tmp = "appkey=cf3ef13a067670168b1b1918&timestamp="+Date.now()+"&random_str=022cd9fd995849b58b3ef0e943421ed9&key=afb39ba3e13ff0f40126f0ff"
+                this.signature = md5(tmp);
+                console.log(this.signature,'签名signature')
+                
+
+             }
+             
+         })
+    }
+    // jquery版本
+
+    // var JIM = new JMessage({debug:true});
+    // function init(){
+    //     // 初始化 
+    // JIM.init({
+    //         "appkey" : "cf3ef13a067670168b1b1918   ",
+    //         "random_str" : "<random_str>",
+    //         "signature" : "<signature>",
+    //         "timestamp" : "<timestamp>",
+    //         "flag" : 0
+    //     }).onSuccess(function(data) {
+    //         console.log(111111)
+    //        //data.code 返回码
+    //        //data.message 描述
+    //       }).onFail(function(data) {
+    //         console.log(22222)
+    //         // 同上
+    //     });
+    // }
+    // init()
+    
+</script>
+</html>

@@ -41,8 +41,21 @@
   margin-left: 0.19324rem;
 }
 
+.chat-middle {
+  width: 100%;
+  position: fixed;
+  top: 3.09179rem;
+  bottom: 2.51208rem;
+  left: 0;
+  right: 0;
+  border: 1px solid red;
+}
+
 .middle {
-  min-height: 15.45894rem;
+  height: 100%;
+  overflow: scroll;
+  width: 100%;
+  border: 1px solid black;
 }
 
 .m-loadmore {
