@@ -99,7 +99,8 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 
     .spokesman-rg {
 
-        // overflow: hidden;
+        overflow: hidden;
+
         >img {
             width: px2rem(91);
             height: px2rem(91);
@@ -107,7 +108,23 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
             float: right;
         }
 
-        >div {
+        div {
+            width: px2rem(568);
+            // height: px2rem(312);
+            float: right;
+            // background-image: url(../img/);
+            background-color: #75AFFF;
+            border-radius: px2rem(20);
+            padding: px2rem(20);
+            font-size: px2rem(32);
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #FFFEFE;
+            line-height: px2rem(50);
+            margin-top: px2rem(45);
+        }
+
+        >div.voice-msg {
             width: px2rem(468);
             height: px2rem(87);
             float: right;
@@ -349,7 +366,8 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
 }
 
 // 搜索操作
-.search-handle {
+.search-handle,
+.apply-group {
     background-color: #fff;
     // padding-left: px2rem(20);
     padding-left: px2rem(30);
@@ -359,6 +377,7 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
     z-index: 10;
     padding-bottom: px2rem(30);
     display: none;
+    width: 100%;
 
     input {
         width: px2rem(768);
@@ -439,4 +458,77 @@ $designWidth : 828; //写scss之前，必须要先定义designWidth。
             float: right;
         }
     }
+}
+
+//申请入群列表
+.apply-group1 {
+    background-color: #fff;
+    padding-left: px2rem(20);
+    padding-right: px2rem(20);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding-bottom: px2rem(30);
+    display: none;
+    margin-top: px2rem(160);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: px2rem(10);
+
+    ul {
+        overflow: hidden;
+
+        li {
+            font-family: PingFang SC;
+            font-weight: 500;
+            padding-top: px2rem(20);
+            float: left;
+
+            div {
+                float: left;
+
+                label {
+                    font-size: px2rem(32);
+                    display: block;
+                }
+
+                span {
+                    font-size: px2rem(32);
+                }
+            }
+
+            button {
+                float: right;
+                margin-left: px2rem(20);
+            }
+        }
+    }
+
+}
+
+//禁言时间选择
+.forbidden-time {
+    .el-dialog {
+        width: 75%;
+    }
+
+    .el-dialog__body {
+        padding: 20px;
+    }
+
+    .el-radio__label {
+        font-size: 16px;
+    }
+
+    .el-radio {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .el-dialog__footer {
+        text-align: center;
+        padding: 10px;
+    }
+
 }

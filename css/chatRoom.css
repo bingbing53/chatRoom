@@ -89,6 +89,10 @@
   margin-top: 0.86957rem;
 }
 
+.m-loadmore .spokesman-rg {
+  overflow: hidden;
+}
+
 .m-loadmore .spokesman-rg > img {
   width: 1.75845rem;
   height: 1.75845rem;
@@ -96,7 +100,21 @@
   float: right;
 }
 
-.m-loadmore .spokesman-rg > div {
+.m-loadmore .spokesman-rg div {
+  width: 10.97585rem;
+  float: right;
+  background-color: #75AFFF;
+  border-radius: 0.38647rem;
+  padding: 0.38647rem;
+  font-size: 0.61836rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFEFE;
+  line-height: 0.96618rem;
+  margin-top: 0.86957rem;
+}
+
+.m-loadmore .spokesman-rg > div.voice-msg {
   width: 9.04348rem;
   height: 1.68116rem;
   float: right;
@@ -105,7 +123,7 @@
   margin-top: 0.86957rem;
 }
 
-.m-loadmore .spokesman-rg > div > label {
+.m-loadmore .spokesman-rg > div.voice-msg > label {
   font-size: 0.61836rem;
   font-family: PingFang SC;
   font-weight: 500;
@@ -114,22 +132,22 @@
   margin-left: 0.57971rem;
 }
 
-.m-loadmore .spokesman-rg > div > span {
+.m-loadmore .spokesman-rg > div.voice-msg > span {
   float: right;
   margin-right: 0.57971rem;
 }
 
-.m-loadmore .spokesman-rg > div > span img {
+.m-loadmore .spokesman-rg > div.voice-msg > span img {
   width: 0.46377rem;
   height: 0.63768rem;
 }
 
-.m-loadmore .spokesman-rg > div > i {
+.m-loadmore .spokesman-rg > div.voice-msg > i {
   float: right;
   margin-right: 0.25121rem;
 }
 
-.m-loadmore .spokesman-rg > div > i img {
+.m-loadmore .spokesman-rg > div.voice-msg > i img {
   width: 0.42512rem;
   height: 0.38647rem;
 }
@@ -320,7 +338,8 @@
   display: block;
 }
 
-.search-handle {
+.search-handle,
+.apply-group {
   background-color: #fff;
   padding-left: 0.57971rem;
   padding-right: 0.57971rem;
@@ -329,9 +348,11 @@
   z-index: 10;
   padding-bottom: 0.57971rem;
   display: none;
+  width: 100%;
 }
 
-.search-handle input {
+.search-handle input,
+.apply-group input {
   width: 14.84058rem;
   height: 1.48792rem;
   background: #F5F5F5;
@@ -340,19 +361,22 @@
   text-align: center;
 }
 
-.search-handle ul li {
+.search-handle ul li,
+.apply-group ul li {
   overflow: hidden;
   border-bottom: 0.01932rem solid rgba(0, 0, 0, 0.1);
   padding: 0.48309rem 0;
 }
 
-.search-handle ul li img {
+.search-handle ul li img,
+.apply-group ul li img {
   width: 1.93237rem;
   height: 1.93237rem;
   float: left;
 }
 
-.search-handle ul li div.search-msg {
+.search-handle ul li div.search-msg,
+.apply-group ul li div.search-msg {
   float: left;
   font-family: PingFang SC;
   font-weight: 500;
@@ -361,18 +385,21 @@
   margin-left: 0.57971rem;
 }
 
-.search-handle ul li div.search-msg label {
+.search-handle ul li div.search-msg label,
+.apply-group ul li div.search-msg label {
   font-size: 0.61836rem;
   display: block;
 }
 
-.search-handle ul li div.search-msg span {
+.search-handle ul li div.search-msg span,
+.apply-group ul li div.search-msg span {
   font-size: 0.54106rem;
   display: block;
   color: #7E7E7E;
 }
 
-.search-handle .handle-icon {
+.search-handle .handle-icon,
+.apply-group .handle-icon {
   float: right;
   width: 4.07729rem;
   height: 1.15942rem;
@@ -384,13 +411,15 @@
   padding: 0.21256rem 0.57971rem;
 }
 
-.search-handle .handle-icon img {
+.search-handle .handle-icon img,
+.apply-group .handle-icon img {
   width: 0.7343rem;
   height: 0.7343rem;
   float: left;
 }
 
-.search-handle .handle-icon i {
+.search-handle .handle-icon i,
+.apply-group .handle-icon i {
   width: 0.03865rem;
   height: 0.59903rem;
   background: #FFFFFF;
@@ -400,10 +429,78 @@
   margin-top: 0.07729rem;
 }
 
-.search-handle .handle-icon span {
+.search-handle .handle-icon span,
+.apply-group .handle-icon span {
   font-size: 0.50242rem;
   font-family: PingFang SC;
   font-weight: 500;
   color: #FFFFFF;
   float: right;
+}
+
+.apply-group1 {
+  background-color: #fff;
+  padding-left: 0.38647rem;
+  padding-right: 0.38647rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding-bottom: 0.57971rem;
+  display: none;
+  margin-top: 3.09179rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0.19324rem;
+}
+
+.apply-group1 ul {
+  overflow: hidden;
+}
+
+.apply-group1 ul li {
+  font-family: PingFang SC;
+  font-weight: 500;
+  padding-top: 0.38647rem;
+  float: left;
+}
+
+.apply-group1 ul li div {
+  float: left;
+}
+
+.apply-group1 ul li div label {
+  font-size: 0.61836rem;
+  display: block;
+}
+
+.apply-group1 ul li div span {
+  font-size: 0.61836rem;
+}
+
+.apply-group1 ul li button {
+  float: right;
+  margin-left: 0.38647rem;
+}
+
+.forbidden-time .el-dialog {
+  width: 75%;
+}
+
+.forbidden-time .el-dialog__body {
+  padding: 20px;
+}
+
+.forbidden-time .el-radio__label {
+  font-size: 16px;
+}
+
+.forbidden-time .el-radio {
+  display: block;
+  margin-top: 10px;
+}
+
+.forbidden-time .el-dialog__footer {
+  text-align: center;
+  padding: 10px;
 }

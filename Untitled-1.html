@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>demo</title>
+</head>
+<body>
+<div id="example">
+<h3 id="example_title">将滚动条（scrollbar）保持在最底部的方法</h3>
+<div id="example_main">
+<span class="notice">请点击“插入一行”按钮，插入最新信息，当出现滚动条时，滚动条将自动保持在底部。</span><br />
+ 
+<div id="scrolldIV" style="overflow:auto; height: 100px; width: 400px; border: 1px solid #999;">
+</div>
+<input type="button" value="插入一行" id = "btn">
+</div>
+</div>
+<script type="text/javascript">
+	var btn = document.getElementById('btn');
+	btn.onclick=function add(){
+		var now = new Date();
+			console.log(now)
+		var div = document.getElementById('scrolldIV');
+		div.innerHTML = div.innerHTML + 'time_' + now.getTime() + '<br />';
+		div.scrollTop = div.scrollHeight;
+	}
+</script>
+</body>
+</html>
