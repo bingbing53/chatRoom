@@ -504,3 +504,17 @@
   text-align: center;
   padding: 10px;
 }
+
+ul.tips {
+  padding: 0.38647rem;
+  z-index: 20;
+  position: absolute;
+}
+
+ul.tips li {
+  padding: 0.19324rem;
+  background-color: tan;
+  border-radius: 0.19324rem;
+  font-size: 0.50242rem;
+  color: #fff;
+}
